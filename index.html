@@ -5,7 +5,7 @@
   <title>Mr. Dreamboi – Travel Creator Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Bold Modern Fonts -->
+  <!-- Bold Modern Font -->
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
@@ -31,40 +31,38 @@
       line-height: 1.6;
     }
 
-    /* Smooth animations */
-    .fade {
-      animation: fadeIn 1.2s ease forwards;
+    /* SCROLL REVEAL ANIMATION */
+    .reveal {
       opacity: 0;
+      transform: translateY(40px);
+      transition: all 1s ease;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    .reveal.active {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     /* HERO SECTION */
     .hero {
-  text-align: center;
-  padding: 140px 20px 140px;
-  color: var(--white);
-  text-shadow: 0 3px 10px rgba(0,0,0,0.4);
+      text-align: center;
+      padding: 160px 20px 160px;
+      color: var(--white);
+      text-shadow: 0 3px 10px rgba(0,0,0,0.4);
 
-  background: url("Messenger_creation_3BA50061-436D-4515-9B97-C0DBEBD75D94.png") center/cover no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-
-  border-radius: 0;
-}
+      background: url("Messenger_creation_3BA50061-436D-4515-9B97-C0DBEBD75D94.png") center/cover no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
     }
 
     .hero h1 {
-      font-size: 3.2rem;
+      font-size: 3.4rem;
       font-weight: 800;
       margin-bottom: 10px;
     }
 
     .hero p {
-      font-size: 1.2rem;
+      font-size: 1.3rem;
       font-weight: 500;
       opacity: 0.95;
     }
@@ -95,7 +93,7 @@
 
     section h2 {
       text-align: center;
-      font-size: 2rem;
+      font-size: 2.2rem;
       font-weight: 800;
       margin-bottom: 25px;
       color: var(--navy);
@@ -205,7 +203,7 @@
 <body>
 
   <!-- HERO -->
-  <div class="hero fade">
+  <div class="hero reveal">
     <h1>MR. DREAMBOI</h1>
     <p>Travel Creator • Storyteller • Brand Collaborator</p>
     <a class="cta-btn" href="#contact">Work With Me</a>
@@ -214,7 +212,7 @@
   <main>
 
     <!-- ABOUT -->
-    <section class="about fade">
+    <section class="about reveal">
       <h2>ABOUT ME</h2>
       <p>Hey, I’m <strong>Mr. Dreamboi</strong> — a Filipino travel creator who turns everyday adventures into cinematic, high‑energy content. My videos blend humor, authenticity, and storytelling, making people feel like they’re right there with me.</p>
       <p>I capture destinations with personality, showcasing culture, food, lifestyle, and the beauty of exploring boldly.</p>
@@ -222,31 +220,31 @@
     </section>
 
     <!-- SERVICES -->
-    <section class="services fade">
+    <section class="services reveal">
       <h2>SERVICES</h2>
       <div class="services-list">
 
-        <div class="service-card">
+        <div class="service-card reveal">
           <h3>Travel Video Creation</h3>
           <p>High‑energy vertical videos optimized for TikTok, Reels, and Shorts.</p>
         </div>
 
-        <div class="service-card">
+        <div class="service-card reveal">
           <h3>Brand Collaborations</h3>
           <p>Authentic creator‑style promos with personality and storytelling.</p>
         </div>
 
-        <div class="service-card">
+        <div class="service-card reveal">
           <h3>Lifestyle Features</h3>
           <p>Aesthetic shots for gadgets, food, fashion, and experiences.</p>
         </div>
 
-        <div class="service-card">
+        <div class="service-card reveal">
           <h3>Event Coverage</h3>
           <p>Fast‑turnaround highlight videos for launches and brand events.</p>
         </div>
 
-        <div class="service-card">
+        <div class="service-card reveal">
           <h3>Social Boost Packages</h3>
           <p>Bundles with multiple videos and cross‑platform posting.</p>
         </div>
@@ -255,36 +253,36 @@
     </section>
 
     <!-- BRAND PARTNERS -->
-    <section class="brands fade">
+    <section class="brands reveal">
       <h2>BRAND PARTNERS</h2>
       <div class="brands-grid">
 
-        <div class="brand-item">
+        <div class="brand-item reveal">
           <img src="images.png" alt="Huawei Logo">
           <p>Huawei – Mobile photography & lifestyle content.</p>
         </div>
 
-        <div class="brand-item">
+        <div class="brand-item reveal">
           <img src="jeep-logo-1993-download.png" alt="Jeep Logo">
           <p>Jeep – Adventure reels & road trip storytelling.</p>
         </div>
 
-        <div class="brand-item">
+        <div class="brand-item reveal">
           <img src="Cebu_Pacific_Air_logo_logotype.png" alt="Cebu Pacific Logo">
           <p>Cebu Pacific – Flight & travel experience highlights.</p>
         </div>
 
-        <div class="brand-item">
+        <div class="brand-item reveal">
           <img src="grab-logo-rounded-hd-free-png.png" alt="Grab Logo">
           <p>Grab – City travel convenience & lifestyle integrations.</p>
         </div>
 
-        <div class="brand-item">
+        <div class="brand-item reveal">
           <img src="SM_Investments_Logo.png" alt="SM Logo">
           <p>SM – Food, lifestyle, and mall walkthrough content.</p>
         </div>
 
-        <div class="brand-item">
+        <div class="brand-item reveal">
           <img src="RedDoorz_Logo.png" alt="RedDoorz Logo">
           <p>RedDoorz – Hotel stay review & budget travel content.</p>
         </div>
@@ -293,27 +291,27 @@
     </section>
 
     <!-- VIDEOS -->
-    <section class="videos fade">
+    <section class="videos reveal">
       <h2>FEATURED VIDEOS</h2>
       <div class="videos-grid">
 
-        <iframe src="https://www.tiktok.com/embed/v2/7640356573570796818"
+        <iframe class="reveal" src="https://www.tiktok.com/embed/v2/7640356573570796818"
                 width="300" height="533" allowfullscreen></iframe>
 
-        <iframe src="https://www.tiktok.com/embed/v2/7639948796402748679"
+        <iframe class="reveal" src="https://www.tiktok.com/embed/v2/7639948796402748679"
                 width="300" height="533" allowfullscreen></iframe>
 
-        <iframe src="https://www.tiktok.com/embed/v2/7642579094638447879"
+        <iframe class="reveal" src="https://www.tiktok.com/embed/v2/7642579094638447879"
                 width="300" height="533" allowfullscreen></iframe>
 
-        <iframe src="https://www.tiktok.com/embed/v2/7624414572589452552"
+        <iframe class="reveal" src="https://www.tiktok.com/embed/v2/7624414572589452552"
                 width="300" height="533" allowfullscreen></iframe>
 
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section id="contact" class="contact fade">
+    <section id="contact" class="contact reveal">
       <h2>CONTACT</h2>
       <p><strong>Email:</strong> <a href="mailto:jrpuno14344@gmail.com">jrpuno14344@gmail.com</a></p>
       <p><strong>TikTok:</strong> @mr.dreamboi2x</p>
@@ -325,6 +323,25 @@
   <footer>
     © 2026 Mr. Dreamboi · Creator Portfolio
   </footer>
+
+  <!-- SCROLL REVEAL SCRIPT -->
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+
+    function revealOnScroll() {
+      for (let i = 0; i < reveals.length; i++) {
+        const windowHeight = window.innerHeight;
+        const elementTop = reveals[i].getBoundingClientRect().top;
+
+        if (elementTop < windowHeight - 100) {
+          reveals[i].classList.add('active');
+        }
+      }
+    }
+
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll();
+  </script>
 
 </body>
 </html>
