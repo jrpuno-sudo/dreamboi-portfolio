@@ -9,6 +9,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
     :root {
       --navy: #0b1b3b;
       --gold: #f4c542;
@@ -23,15 +27,63 @@
       font-family: 'Montserrat', sans-serif;
     }
 
-    /* FULL-PAGE GRADIENT */
     body {
       background: url("pexels-codioful-7134993.jpg") no-repeat center center fixed;
       background-size: cover;
       color: var(--text);
       line-height: 1.6;
+      padding-top: 90px; /* space for navbar */
     }
 
-    /* SCROLL REVEAL ANIMATION */
+    /* FLOATING NAVBAR */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      backdrop-filter: blur(12px);
+      background: rgba(255, 255, 255, 0.35);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      z-index: 999;
+    }
+
+    .nav-logo {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--navy);
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      font-weight: 600;
+      color: var(--navy);
+      transition: 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--gold);
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        gap: 15px;
+      }
+      .nav-logo {
+        font-size: 1.1rem;
+      }
+    }
+
+    /* SCROLL REVEAL */
     .reveal {
       opacity: 0;
       transform: translateY(40px);
@@ -42,7 +94,7 @@
       transform: translateY(0);
     }
 
-    /* HERO SECTION */
+    /* HERO */
     .hero {
       text-align: center;
       padding: 160px 20px 160px;
@@ -76,7 +128,7 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
 
-    /* SECTION BLOCKS */
+    /* SECTIONS */
     section {
       background: rgba(255,255,255,0.92);
       margin: 40px auto;
@@ -105,7 +157,7 @@
       margin-right: auto;
     }
 
-    /* STAT BOXES */
+    /* STATS */
     .stats-container {
       display: flex;
       justify-content: center;
@@ -151,7 +203,6 @@
       overflow: hidden;
     }
 
-    /* Gradient colors */
     .service-card:nth-child(1) { background: linear-gradient(135deg, #4A6CF7, #7C9BFF); }
     .service-card:nth-child(2) { background: linear-gradient(135deg, #FF5FA2, #FF9AC4); }
     .service-card:nth-child(3) { background: linear-gradient(135deg, #F4C542, #FFD66B); color: #0b1b3b; }
@@ -159,20 +210,7 @@
     .service-card:nth-child(5) { background: linear-gradient(135deg, #8E54E9, #4776E6); }
     .service-card:nth-child(6) { background: linear-gradient(135deg, #00B09B, #96C93D); }
 
-    .service-card h3 {
-      position: relative;
-      font-size: 1.3rem;
-      font-weight: 700;
-      margin-bottom: 10px;
-    }
-
-    .service-card p {
-      position: relative;
-      font-size: 0.95rem;
-      opacity: 0.9;
-    }
-
-    /* BRAND LOGOS */
+    /* BRANDS */
     .brands-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -237,6 +275,19 @@
 
 <body>
 
+  <!-- FLOATING NAVBAR -->
+  <nav class="navbar">
+    <div class="nav-logo">MR. DREAMBOI</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#brands">Brands</a></li>
+      <li><a href="#travel">Travel Videos</a></li>
+      <li><a href="#products">Product Videos</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
   <!-- HERO -->
   <div class="hero reveal">
     <h1>MR. DREAMBOI</h1>
@@ -247,7 +298,7 @@
   <main>
 
     <!-- ABOUT -->
-    <section class="about reveal">
+    <section id="about" class="about reveal">
       <h2>ABOUT ME</h2>
       <p>Hey, I’m <strong>Mr. Dreamboi</strong> — a Filipino travel and lifestyle creator who has been crafting content for <strong>3 years</strong>. I turn everyday moments into cinematic visuals that highlight culture, food, destinations, and meaningful experiences.</p>
 
@@ -263,7 +314,7 @@
     </section>
 
     <!-- SERVICES -->
-    <section class="services reveal">
+    <section id="services" class="services reveal">
       <h2>SERVICES</h2>
       <div class="services-list">
 
@@ -301,7 +352,7 @@
     </section>
 
     <!-- BRAND PARTNERS -->
-    <section class="brands reveal">
+    <section id="brands" class="brands reveal">
       <h2>BRAND PARTNERS</h2>
       <div class="brands-grid">
 
@@ -316,19 +367,25 @@
         <div class="brand-item reveal"><img src="Ugreen.webp"><p>Ugreen</p></div>
         <div class="brand-item reveal"><img src="Anker(2).png"><p>Anker</p></div>
         <div class="brand-item reveal"><img src="Tranyoo.jpeg"><p>Tranyoo</p></div>
-        <div class="brand-item reveal"><img src="Photoolex.png"><p>Photoolex</p></div>
         <div class="brand-item reveal"><img src="Sleepasil.jpg"><p>Sleepasil</p></div>
         <div class="brand-item reveal"><img src="Orashare.jpeg"><p>Orashare</p></div>
         <div class="brand-item reveal"><img src="Jisulife (1).png"><p>Jisulife</p></div>
         <div class="brand-item reveal"><img src="Goodies.jpeg"><p>Goodies Nutrition</p></div>
 
+        <!-- NEW BRAND -->
+        <div class="brand-item reveal"><img src="images (4).png"><p>Brand Name</p></div>
+
       </div>
     </section>
 
     <!-- TRAVEL VIDEOS -->
-    <section class="videos reveal">
+    <section id="travel" class="videos reveal">
       <h2>TRAVEL VIDEOS</h2>
       <div class="videos-grid">
+
+        <iframe class="reveal" src="https://www.tiktok.com/embed/v2/7640356573570796818" width="300" height="533"></iframe>
+        <iframe class="reveal" src="https://www.tiktok.com/embed/v2/7642579094638447879" width="300" height="533"></iframe>
+        <iframe class="reveal" src="https://www.tiktok.com/embed/v2/7624414572589452552" width="300" height="533"></iframe>
 
         <iframe class="reveal" src="https://www.tiktok.com/embed/v2/7660361857257049351" width="300" height="533"></iframe>
         <iframe class="reveal" src="https://www.tiktok.com/embed/v2/7624442596693265682" width="300" height="533"></iframe>
@@ -338,7 +395,7 @@
     </section>
 
     <!-- PRODUCT VIDEOS -->
-    <section class="videos reveal">
+    <section id="products" class="videos reveal">
       <h2>PRODUCT VIDEOS</h2>
       <div class="videos-grid">
 
@@ -366,24 +423,4 @@
     © 2026 Mr. Dreamboi · Creator Portfolio
   </footer>
 
-  <!-- SCROLL REVEAL SCRIPT -->
-  <script>
-    const reveals = document.querySelectorAll('.reveal');
-
-    function revealOnScroll() {
-      for (let i = 0; i < reveals.length; i++) {
-        const windowHeight = window.innerHeight;
-        const elementTop = reveals[i].getBoundingClientRect().top;
-
-        if (elementTop < windowHeight - 100) {
-          reveals[i].classList.add('active');
-        }
-      }
-    }
-
-    window.addEventListener('scroll', revealOnScroll);
-    revealOnScroll();
-  </script>
-
-</body>
-</html>
+  <!-- SCROLL REVEAL
