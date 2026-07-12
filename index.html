@@ -118,23 +118,40 @@
     }
 
     .service-card {
-      background: var(--white);
+      background: url("city-bg.png") center/cover no-repeat;
       padding: 20px;
       border-radius: 16px;
       box-shadow: 0 3px 12px rgba(0,0,0,0.1);
       text-align: center;
+      color: white;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .service-card::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.45);
+      backdrop-filter: blur(2px);
     }
 
     .service-card h3 {
+      position: relative;
       font-size: 1.3rem;
       font-weight: 700;
       margin-bottom: 10px;
-      color: var(--navy);
+      color: var(--white);
     }
 
     .service-card p {
+      position: relative;
       font-size: 0.95rem;
       opacity: 0.85;
+      color: var(--white);
     }
 
     /* BRAND LOGOS */
@@ -214,9 +231,10 @@
     <!-- ABOUT -->
     <section class="about reveal">
       <h2>ABOUT ME</h2>
-      <p>Hey, I’m <strong>Mr. Dreamboi</strong> — a Filipino travel creator who turns everyday adventures into cinematic, high‑energy content. My videos blend humor, authenticity, and storytelling, making people feel like they’re right there with me.</p>
-      <p>I capture destinations with personality, showcasing culture, food, lifestyle, and the beauty of exploring boldly.</p>
-      <p>My mission is simple: <strong>to inspire people to explore more, live boldly, and enjoy the journey.</strong></p>
+      <p>Hey, I’m <strong>Mr. Dreamboi</strong> — a Filipino travel and lifestyle creator who has been crafting content for <strong>3 years</strong>. I turn everyday moments into cinematic visuals that highlight culture, food, destinations, and meaningful experiences.</p>
+      <p>I create <strong>travel videos</strong>, <strong>product reviews</strong>, and <strong>affiliate marketing content</strong> that help audiences discover places, tools, and products that genuinely make life better.</p>
+      <p>With <strong>103.5K followers</strong> and <strong>1.2M likes</strong>, my content has reached thousands across the Philippines and beyond.</p>
+      <p>What makes my work unique is simple: <strong>I create with intention.</strong> Every video is crafted with care, heart, and professionalism — not just for views, but to tell a story, deliver value, and make people feel something.</p>
     </section>
 
     <!-- SERVICES -->
@@ -226,27 +244,42 @@
 
         <div class="service-card reveal">
           <h3>Travel Video Creation</h3>
-          <p>High‑energy vertical videos optimized for TikTok, Reels, and Shorts.</p>
+          <p>Cinematic travel storytelling with personality and purpose.</p>
         </div>
 
         <div class="service-card reveal">
-          <h3>Brand Collaborations</h3>
-          <p>Authentic creator‑style promos with personality and storytelling.</p>
+          <h3>Product Reviews</h3>
+          <p>Honest, clear, and helpful product showcases.</p>
         </div>
 
         <div class="service-card reveal">
-          <h3>Lifestyle Features</h3>
-          <p>Aesthetic shots for gadgets, food, fashion, and experiences.</p>
+          <h3>Affiliate Marketing Content</h3>
+          <p>Engaging videos that convert viewers into buyers.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <h3>Restaurant Reviews</h3>
+          <p>Food-focused content highlighting taste, ambiance, and experience.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <h3>Food Reviews</h3>
+          <p>Authentic reactions and detailed breakdowns of dishes.</p>
         </div>
 
         <div class="service-card reveal">
           <h3>Event Coverage</h3>
-          <p>Fast‑turnaround highlight videos for launches and brand events.</p>
+          <p>Fast-turnaround highlight videos for launches and brand events.</p>
+        </div>
+
+        <div class="service-card reveal">
+          <h3>Brand Collaborations</h3>
+          <p>Creator-style promos with storytelling and authenticity.</p>
         </div>
 
         <div class="service-card reveal">
           <h3>Social Boost Packages</h3>
-          <p>Bundles with multiple videos and cross‑platform posting.</p>
+          <p>Bundles with multiple videos and cross-platform posting.</p>
         </div>
 
       </div>
@@ -257,55 +290,51 @@
       <h2>BRAND PARTNERS</h2>
       <div class="brands-grid">
 
-        <div class="brand-item reveal">
-          <img src="images.png" alt="Huawei Logo">
-          <p>Huawei – Mobile photography & lifestyle content.</p>
-        </div>
-
-        <div class="brand-item reveal">
-          <img src="jeep-logo-1993-download.png" alt="Jeep Logo">
-          <p>Jeep – Adventure reels & road trip storytelling.</p>
-        </div>
-
-        <div class="brand-item reveal">
-          <img src="Cebu_Pacific_Air_logo_logotype.png" alt="Cebu Pacific Logo">
-          <p>Cebu Pacific – Flight & travel experience highlights.</p>
-        </div>
-
-        <div class="brand-item reveal">
-          <img src="grab-logo-rounded-hd-free-png.png" alt="Grab Logo">
-          <p>Grab – City travel convenience & lifestyle integrations.</p>
-        </div>
-
-        <div class="brand-item reveal">
-          <img src="SM_Investments_Logo.png" alt="SM Logo">
-          <p>SM – Food, lifestyle, and mall walkthrough content.</p>
-        </div>
-
-        <div class="brand-item reveal">
-          <img src="RedDoorz_Logo.png" alt="RedDoorz Logo">
-          <p>RedDoorz – Hotel stay review & budget travel content.</p>
-        </div>
+        <div class="brand-item reveal"><img src="Huawei.png"><p>Huawei</p></div>
+        <div class="brand-item reveal"><img src="Xiaomi_logo_(2021-).svg.png"><p>Xiaomi</p></div>
+        <div class="brand-item reveal"><img src="Techlife.png"><p>Teclife</p></div>
+        <div class="brand-item reveal"><img src="Shopee_logo.svg.png"><p>Shopee</p></div>
+        <div class="brand-item reveal"><img src="lazada-png-logo.png"><p>Lazada</p></div>
+        <div class="brand-item reveal"><img src="ulanzi.png"><p>Ulanzi</p></div>
+        <div class="brand-item reveal"><img src="aolon-600-2_2.png"><p>Aolon</p></div>
+        <div class="brand-item reveal"><img src="TNW.png"><p>TNW</p></div>
+        <div class="brand-item reveal"><img src="Ugreen.webp"><p>Ugreen</p></div>
+        <div class="brand-item reveal"><img src="Anker.png"><p>Anker</p></div>
+        <div class="brand-item reveal"><img src="Tranyoo.jpeg"><p>Tranyoo</p></div>
+        <div class="brand-item reveal"><img src="Boya.png"><p>Boya</p></div>
+        <div class="brand-item reveal"><img src="Photoolex.png"><p>Photoolex</p></div>
+        <div class="brand-item reveal"><img src="Sleepasil.jpg"><p>Sleepasil</p></div>
+        <div class="brand-item reveal"><img src="Orashare.png"><p>Orashare</p></div>
+        <div class="brand-item reveal"><img src="Jisulife.png"><p>Jisulife</p></div>
+        <div class="brand-item reveal"><img src="Shisuo.png"><p>Shisuo</p></div>
+        <div class="brand-item reveal"><img src="Goodies.png"><p>Goodies Nutrition</p></div>
 
       </div>
     </section>
 
-    <!-- VIDEOS -->
+    <!-- TRAVEL VIDEOS -->
     <section class="videos reveal">
-      <h2>FEATURED VIDEOS</h2>
+      <h2>TRAVEL VIDEOS</h2>
       <div class="videos-grid">
 
-        <iframe class="reveal" src="https://www.tiktok.com/embed/v2/7640356573570796818"
-                width="300" height="533" allowfullscreen></iframe>
+        <iframe class="reveal" src="https://www.tiktok.com/embed/v2/7660361857257049351" width="300" height="533"></iframe>
+        <iframe class="reveal" src="https://www.tiktok.com/embed/v2/7624442596693265682" width="300" height="533"></iframe>
+        <iframe class="reveal" src="https://www.tiktok.com/embed/v2/7628984350712941832" width="300" height="533"></iframe>
 
-        <iframe class="reveal" src="https://www.tiktok.com/embed/v2/7639948796402748679"
-                width="300" height="533" allowfullscreen></iframe>
+      </div>
+    </section>
 
-        <iframe class="reveal" src="https://www.tiktok.com/embed/v2/7642579094638447879"
-                width="300" height="533" allowfullscreen></iframe>
+    <!-- PRODUCT VIDEOS -->
+    <section class="videos reveal">
+      <h2>PRODUCT VIDEOS</h2>
+      <div class="videos-grid">
 
-        <iframe class="reveal" src="https://www.tiktok.com/embed/v2/7624414572589452552"
-                width="300" height="533" allowfullscreen></iframe>
+        <iframe class="reveal" src="https://www.tiktok.com/embed/v2/7608511113235418388" width="300" height="533"></iframe>
+        <iframe class="reveal" src="https://www.tiktok.com/embed/v2/7619554766393298197" width="300" height="533"></iframe>
+        <iframe class="reveal" src="https://www.tiktok.com/embed/v2/7533163019405217042" width="300" height="533"></iframe>
+        <iframe class="reveal" src="https://www.tiktok.com/embed/v2/7567368129672695041" width="300" height="533"></iframe>
+        <iframe class="reveal" src="https://www.tiktok.com/embed/v2/7525794290778377473" width="300" height="533"></iframe>
+        <iframe class="reveal" src="https://www.tiktok.com/embed/v2/7462325313960201490" width="300" height="533"></iframe>
 
       </div>
     </section>
@@ -314,8 +343,8 @@
     <section id="contact" class="contact reveal">
       <h2>CONTACT</h2>
       <p><strong>Email:</strong> <a href="mailto:jrpuno14344@gmail.com">jrpuno14344@gmail.com</a></p>
-      <p><strong>TikTok:</strong> @mr.dreamboi2x</p>
-      <p><strong>Facebook:</strong> Add your link here</p>
+      <p><strong>TikTok:</strong> <a href="https://www.tiktok.com/@mr.dreamboi2x?_r=1&_t=ZS-97w2yg7JzhV">Click here</a></p>
+      <p><strong>Facebook:</strong> <a href="https://www.facebook.com/share/1BHFcJcR6w/">Click here</a></p>
     </section>
 
   </main>
