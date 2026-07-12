@@ -25,7 +25,7 @@ html, body {
   --platinum:#E5E4E2;
 }
 
-/* NAVBAR — CENTERED */
+/* NAVBAR — CENTERED + SAMSUNG FIX */
 .navbar {
   position:fixed;
   top:0; left:0;
@@ -47,7 +47,7 @@ html, body {
   color:var(--navy);
 }
 
-/* HAMBURGER ALWAYS SHOWS ON SAMSUNG */
+/* ALWAYS SHOW HAMBURGER BELOW 1600px */
 .hamburger {
   position:absolute;
   right:20px;
@@ -63,7 +63,7 @@ html, body {
   border-radius:3px;
 }
 
-/* NAV LINKS CENTERED */
+/* CENTERED NAV LINKS */
 .nav-links {
   list-style:none;
   display:flex;
@@ -71,13 +71,9 @@ html, body {
   font-size:0.95rem;
   font-weight:600;
 }
-.nav-links a {
-  text-decoration:none;
-  color:var(--navy);
-}
 
-/* FORCE MOBILE MODE FOR SAMSUNG */
-@media(max-width:1300px){
+/* FORCE MOBILE MODE AT 1600px */
+@media(max-width:1600px){
   .nav-links {
     display:none;
     position:absolute;
@@ -240,15 +236,26 @@ section h2 {
 }
 .video-track::-webkit-scrollbar { display:none; }
 
+/* FIX THIN VIDEOS — MAKE THEM BIGGER */
 .video-item {
-  min-width:48%;
+  min-width:55%;
 }
+
 .video-item iframe {
   width:100%;
-  height:420px;
+  height:500px;
   border:none;
   border-radius:20px;
   box-shadow:0 4px 16px rgba(0,0,0,0.25);
+}
+
+@media(max-width:600px){
+  .video-item {
+    min-width:80%;
+  }
+  .video-item iframe {
+    height:520px;
+  }
 }
 
 /* ARROWS */
@@ -438,10 +445,10 @@ function toggleMenu(){
 }
 
 function scrollLeft(id){
-  document.getElementById(id).scrollBy({left:-300,behavior:'smooth'});
+  document.getElementById(id).scrollBy({left:-350,behavior:'smooth'});
 }
 function scrollRight(id){
-  document.getElementById(id).scrollBy({left:300,behavior:'smooth'});
+  document.getElementById(id).scrollBy({left:350,behavior:'smooth'});
 }
 </script>
 
