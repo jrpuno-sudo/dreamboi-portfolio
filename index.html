@@ -24,12 +24,11 @@ html, body {
 }
 
 :root {
-  --navy:#0b1b3b;
-  --earth1:#C2A27A;
-  --earth2:#8A6E4B;
-  --earth3:#1F4D3A;
-  --blue:#4A6CF7;
-  --platinum:#E5E4E2;
+  --navy:#0B1B3B;
+  --soft-navy:#1F2E4A;
+  --ice-silver:#DDE2E8;
+  --silver:#C0C0C0;
+  --white:#ffffff;
 }
 
 /* ⭐ NAVBAR — CENTERED + SAMSUNG FIX */
@@ -144,15 +143,14 @@ section h2 {
 .stat-box {
   padding:18px 26px;
   border-radius:18px;
-  color:white;
+  color:var(--navy);
+  background:var(--ice-silver);
   font-size:1.3rem;
   font-weight:800;
   text-align:center;
+  border:2px solid var(--silver);
 }
 .stat-box span { font-size:0.85rem; opacity:0.9; }
-.followers { background:var(--earth1); }
-.likes { background:var(--earth2); }
-.years { background:var(--earth3); }
 
 /* ⭐ CONTACT */
 .contact-links {
@@ -189,21 +187,41 @@ section h2 {
   grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
   gap:18px;
 }
+
+/* ⭐ RANDOMIZED NAVY + SILVER CARDS WITH SMOOTH GRADIENTS */
 .service-card {
   padding:18px;
   border-radius:16px;
-  color:white;
+  color:var(--navy);
   text-align:center;
   box-shadow:0 4px 12px rgba(0,0,0,0.15);
   font-size:0.95rem;
+  border:2px solid var(--silver);
 }
 .service-card h3 { margin-bottom:8px; font-size:1.05rem; }
-.service-card:nth-child(1){background:linear-gradient(135deg,var(--earth1),var(--earth2));}
-.service-card:nth-child(2){background:linear-gradient(135deg,var(--blue),#7C9BFF);}
-.service-card:nth-child(3){background:linear-gradient(135deg,var(--platinum),#ffffff);color:var(--navy);}
-.service-card:nth-child(4){background:linear-gradient(135deg,var(--earth3),#2F6D4A);}
-.service-card:nth-child(5){background:linear-gradient(135deg,#8E54E9,#4776E6);}
-.service-card:nth-child(6){background:linear-gradient(135deg,#00B09B,#96C93D);}
+
+/* Navy gradient cards */
+.service-card:nth-child(1),
+.service-card:nth-child(3),
+.service-card:nth-child(5){
+  background:linear-gradient(135deg,var(--navy),var(--soft-navy));
+  color:white;
+}
+
+/* Silver cards */
+.service-card:nth-child(2),
+.service-card:nth-child(4),
+.service-card:nth-child(6){
+  background:var(--ice-silver);
+  color:var(--navy);
+}
+
+/* ⭐ MOBILE: 2 PER ROW */
+@media(max-width:600px){
+  .services-list{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
 
 /* ⭐ BRANDS — responsive grid */
 .brands-grid {
@@ -243,17 +261,21 @@ section h2 {
 }
 .video-track::-webkit-scrollbar { display:none; }
 
-/* ⭐ FIX CROPPED VIDEOS — FULL HEIGHT */
+/* ⭐ FIX CROPPED VIDEOS + PLAYABILITY + STABILITY */
 .video-item {
   min-width:60%;
 }
 
 .video-item iframe {
   width:100%;
-  height:650px;
+  height:700px;
   border:none;
   border-radius:20px;
   box-shadow:0 4px 16px rgba(0,0,0,0.25);
+  pointer-events:auto;
+  touch-action:manipulation;
+  allowfullscreen;
+  allow="autoplay; encrypted-media";
 }
 
 @media(max-width:600px){
@@ -261,7 +283,7 @@ section h2 {
     min-width:85%;
   }
   .video-item iframe {
-    height:680px;
+    height:720px;
   }
 }
 
@@ -341,9 +363,9 @@ footer {
   <p>I create travel videos, product reviews, and affiliate content with intention and storytelling.</p>
 
   <div class="stats-container">
-    <div class="stat-box followers">103.5K<br><span>Followers</span></div>
-    <div class="stat-box likes">1.2M<br><span>Likes</span></div>
-    <div class="stat-box years">3 Years<br><span>Creating</span></div>
+    <div class="stat-box">103.5K<br><span>Followers</span></div>
+    <div class="stat-box">1.2M<br><span>Likes</span></div>
+    <div class="stat-box">3 Years<br><span>Creating</span></div>
   </div>
 </section>
 
