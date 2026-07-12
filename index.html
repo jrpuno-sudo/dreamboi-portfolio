@@ -25,61 +25,72 @@ html, body {
   --platinum:#E5E4E2;
 }
 
-/* NAVBAR */
+/* NAVBAR — CENTERED */
 .navbar {
   position:fixed;
   top:0; left:0;
   width:100%;
-  padding:12px 20px;
+  padding:14px 20px;
   display:flex;
-  justify-content:space-between;
+  justify-content:center;
   align-items:center;
   backdrop-filter:blur(12px);
   background:rgba(255,255,255,0.85);
   z-index:999;
 }
-.nav-logo { font-size:1.2rem; font-weight:800; color:var(--navy); }
 
+.nav-logo {
+  position:absolute;
+  left:20px;
+  font-size:1.2rem;
+  font-weight:800;
+  color:var(--navy);
+}
+
+/* HAMBURGER ALWAYS SHOWS ON SAMSUNG */
 .hamburger {
-  display:none;
+  position:absolute;
+  right:20px;
+  display:flex;
   flex-direction:column;
   gap:4px;
   cursor:pointer;
 }
 .hamburger span {
-  width:24px;
+  width:26px;
   height:3px;
   background:var(--navy);
   border-radius:3px;
 }
 
+/* NAV LINKS CENTERED */
 .nav-links {
   list-style:none;
   display:flex;
-  gap:12px;
-  font-size:0.9rem;
-  flex-wrap:nowrap;
+  gap:18px;
+  font-size:0.95rem;
+  font-weight:600;
 }
 .nav-links a {
   text-decoration:none;
   color:var(--navy);
-  font-weight:600;
 }
 
-/* FIX: Hamburger shows earlier */
-@media(max-width:1100px){
-  .hamburger{display:flex;}
-  .nav-links{
+/* FORCE MOBILE MODE FOR SAMSUNG */
+@media(max-width:1300px){
+  .nav-links {
+    display:none;
     position:absolute;
-    top:60px; right:20px;
+    top:60px;
+    right:20px;
     background:white;
-    padding:18px;
+    padding:20px;
     border-radius:12px;
     flex-direction:column;
-    display:none;
+    gap:14px;
     box-shadow:0 4px 20px rgba(0,0,0,0.15);
   }
-  .nav-links.show{display:flex;}
+  .nav-links.show { display:flex; }
 }
 
 /* HERO */
@@ -205,7 +216,6 @@ section h2 {
   object-fit:contain;
 }
 
-/* FIX: mobile brands incomplete */
 @media(max-width:900px){
   .brands-grid{
     grid-template-columns:repeat(3,1fr);
@@ -291,9 +301,7 @@ footer {
 
 <nav class="navbar">
   <div class="nav-logo">MR. DREAMBOI</div>
-  <div class="hamburger" onclick="toggleMenu()">
-    <span></span><span></span><span></span>
-  </div>
+
   <ul class="nav-links" id="mobileMenu">
     <li><a href="#about">About</a></li>
     <li><a href="#contact">Contact</a></li>
@@ -302,6 +310,10 @@ footer {
     <li><a href="#travel">Travel Videos</a></li>
     <li><a href="#products">Product Videos</a></li>
   </ul>
+
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span><span></span><span></span>
+  </div>
 </nav>
 
 <div class="hero">
