@@ -48,11 +48,7 @@
       padding: 160px 20px 160px;
       color: var(--white);
       text-shadow: 0 3px 10px rgba(0,0,0,0.4);
-
       background: url("Messenger_creation_3BA50061-436D-4515-9B97-C0DBEBD75D94.png") center/cover no-repeat;
-      background-position: center;
-      background-size: cover;
-      background-repeat: no-repeat;
     }
 
     .hero h1 {
@@ -146,7 +142,6 @@
     }
 
     .service-card {
-      background: url("pexels-codioful-7134993.jpg") center/cover no-repeat;
       padding: 20px;
       border-radius: 16px;
       box-shadow: 0 3px 12px rgba(0,0,0,0.1);
@@ -156,30 +151,25 @@
       overflow: hidden;
     }
 
-    .service-card::after {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background: rgba(0,0,0,0.45);
-      backdrop-filter: blur(2px);
-    }
+    /* Gradient colors */
+    .service-card:nth-child(1) { background: linear-gradient(135deg, #4A6CF7, #7C9BFF); }
+    .service-card:nth-child(2) { background: linear-gradient(135deg, #FF5FA2, #FF9AC4); }
+    .service-card:nth-child(3) { background: linear-gradient(135deg, #F4C542, #FFD66B); color: #0b1b3b; }
+    .service-card:nth-child(4) { background: linear-gradient(135deg, #32C5FF, #6BE3FF); }
+    .service-card:nth-child(5) { background: linear-gradient(135deg, #8E54E9, #4776E6); }
+    .service-card:nth-child(6) { background: linear-gradient(135deg, #00B09B, #96C93D); }
 
     .service-card h3 {
       position: relative;
       font-size: 1.3rem;
       font-weight: 700;
       margin-bottom: 10px;
-      color: var(--white);
     }
 
     .service-card p {
       position: relative;
       font-size: 0.95rem;
-      opacity: 0.85;
-      color: var(--white);
+      opacity: 0.9;
     }
 
     /* BRAND LOGOS */
@@ -303,18 +293,8 @@
         </div>
 
         <div class="service-card reveal">
-          <h3>Event Coverage</h3>
-          <p>Fast-turnaround highlight videos for launches and brand events.</p>
-        </div>
-
-        <div class="service-card reveal">
           <h3>Brand Collaborations</h3>
           <p>Creator-style promos with storytelling and authenticity.</p>
-        </div>
-
-        <div class="service-card reveal">
-          <h3>Social Boost Packages</h3>
-          <p>Bundles with multiple videos and cross-platform posting.</p>
         </div>
 
       </div>
@@ -336,11 +316,10 @@
         <div class="brand-item reveal"><img src="Ugreen.webp"><p>Ugreen</p></div>
         <div class="brand-item reveal"><img src="Anker(2).png"><p>Anker</p></div>
         <div class="brand-item reveal"><img src="Tranyoo.jpeg"><p>Tranyoo</p></div>
-        <div class="brand-item reveal"><img src="Photoleex.png"><p>Photoolex</p></div>
+        <div class="brand-item reveal"><img src="photoolex.png"><p>Photoolex</p></div>
         <div class="brand-item reveal"><img src="Sleepasil.jpg"><p>Sleepasil</p></div>
         <div class="brand-item reveal"><img src="Orashare.jpeg"><p>Orashare</p></div>
         <div class="brand-item reveal"><img src="Jisulife (1).png"><p>Jisulife</p></div>
-        <div class="brand-item reveal"><img src="Shisuo.png"><p>Shisuo</p></div>
         <div class="brand-item reveal"><img src="Goodies.jpeg"><p>Goodies Nutrition</p></div>
 
       </div>
