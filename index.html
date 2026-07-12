@@ -56,8 +56,9 @@ html, body {
 .nav-links {
   list-style:none;
   display:flex;
-  gap:14px;
+  gap:12px;
   font-size:0.9rem;
+  flex-wrap:nowrap;
 }
 .nav-links a {
   text-decoration:none;
@@ -65,8 +66,8 @@ html, body {
   font-weight:600;
 }
 
-/* show hamburger + hide full nav on smaller screens */
-@media(max-width:992px){
+/* FIX: Hamburger shows earlier */
+@media(max-width:1100px){
   .hamburger{display:flex;}
   .nav-links{
     position:absolute;
@@ -204,7 +205,8 @@ section h2 {
   object-fit:contain;
 }
 
-@media(max-width:992px){
+/* FIX: mobile brands incomplete */
+@media(max-width:900px){
   .brands-grid{
     grid-template-columns:repeat(3,1fr);
   }
