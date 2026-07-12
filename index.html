@@ -5,7 +5,7 @@
 <title>Mr. Dreamboi – Travel Creator Portfolio</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- ⭐ OPEN GRAPH PREVIEW IMAGE (Hero Banner) -->
+<!-- ⭐ OPEN GRAPH PREVIEW IMAGE -->
 <meta property="og:title" content="Mr. Dreamboi – Travel Creator Portfolio">
 <meta property="og:description" content="Travel Creator • Storyteller • Brand Collaborator">
 <meta property="og:image" content="https://jrpuno-sudo.github.io/dreamboi-portfolio/Messenger_creation_3BA50061-436D-4515-9B97-C0DBEBD75D94.png">
@@ -31,7 +31,7 @@ html, body {
   --white:#ffffff;
 }
 
-/* ⭐ NAVBAR — CENTERED + SAMSUNG FIX */
+/* ⭐ NAVBAR */
 .navbar {
   position:fixed;
   top:0; left:0;
@@ -53,7 +53,6 @@ html, body {
   color:var(--navy);
 }
 
-/* ⭐ ALWAYS SHOW HAMBURGER BELOW 1600px */
 .hamburger {
   position:absolute;
   right:20px;
@@ -69,7 +68,6 @@ html, body {
   border-radius:3px;
 }
 
-/* ⭐ CENTERED NAV LINKS */
 .nav-links {
   list-style:none;
   display:flex;
@@ -78,7 +76,6 @@ html, body {
   font-weight:600;
 }
 
-/* ⭐ FORCE MOBILE MODE AT 1600px */
 @media(max-width:1600px){
   .nav-links {
     display:none;
@@ -188,11 +185,9 @@ section h2 {
   gap:18px;
 }
 
-/* ⭐ RANDOMIZED NAVY + SILVER CARDS WITH SMOOTH GRADIENTS */
 .service-card {
   padding:18px;
   border-radius:16px;
-  color:var(--navy);
   text-align:center;
   box-shadow:0 4px 12px rgba(0,0,0,0.15);
   font-size:0.95rem;
@@ -223,7 +218,7 @@ section h2 {
   }
 }
 
-/* ⭐ BRANDS — responsive grid */
+/* ⭐ BRANDS */
 .brands-grid {
   display:grid;
   grid-template-columns:repeat(5,1fr);
@@ -248,7 +243,7 @@ section h2 {
   }
 }
 
-/* ⭐ VIDEO SLIDER WITH ARROWS + DOTS */
+/* ⭐ VIDEO SLIDER */
 .video-slider {
   position:relative;
 }
@@ -261,21 +256,24 @@ section h2 {
 }
 .video-track::-webkit-scrollbar { display:none; }
 
-/* ⭐ FIX CROPPED VIDEOS + PLAYABILITY + STABILITY */
+/* ⭐ VIDEO ITEM */
 .video-item {
   min-width:60%;
 }
 
 .video-item iframe {
   width:100%;
-  height:700px;
+  height:600px;
   border:none;
   border-radius:20px;
   box-shadow:0 4px 16px rgba(0,0,0,0.25);
   pointer-events:auto;
   touch-action:manipulation;
+  aspect-ratio:9/16;
+  object-fit:cover;
   allowfullscreen;
   allow="autoplay; encrypted-media";
+  referrerpolicy="strict-origin-when-cross-origin";
 }
 
 @media(max-width:600px){
@@ -283,8 +281,26 @@ section h2 {
     min-width:85%;
   }
   .video-item iframe {
-    height:720px;
+    height:480px;
   }
+}
+
+/* ⭐ WATCH NOW BUTTON */
+.watch-btn {
+  display:block;
+  margin-top:14px;
+  padding:12px 18px;
+  background:transparent;
+  border:2px solid var(--navy);
+  color:var(--navy);
+  text-align:center;
+  border-radius:12px;
+  font-weight:600;
+  text-decoration:none;
+  pointer-events:auto;
+  touch-action:manipulation;
+  position:relative;
+  z-index:20;
 }
 
 /* ⭐ ARROWS */
@@ -434,12 +450,37 @@ footer {
     <div class="arrow arrow-right" onclick="scrollRight('travelTrack')">&#8594;</div>
 
     <div class="video-track" id="travelTrack">
-      <div class="video-item"><iframe src="https://www.tiktok.com/embed/v2/7640356573570796818"></iframe></div>
-      <div class="video-item"><iframe src="https://www.tiktok.com/embed/v2/7642579094638447879"></iframe></div>
-      <div class="video-item"><iframe src="https://www.tiktok.com/embed/v2/7624414572589452552"></iframe></div>
-      <div class="video-item"><iframe src="https://www.tiktok.com/embed/v2/7660361857257049351"></iframe></div>
-      <div class="video-item"><iframe src="https://www.tiktok.com/embed/v2/7624442596693265682"></iframe></div>
-      <div class="video-item"><iframe src="https://www.tiktok.com/embed/v2/7628984350712941832"></iframe></div>
+
+      <div class="video-item">
+        <iframe src="https://www.tiktok.com/embed/v2/7640356573570796818"></iframe>
+        <a class="watch-btn" href="https://www.tiktok.com/@mr.dreamboi2x/video/7640356573570796818" target="_blank">Watch Now</a>
+      </div>
+
+      <div class="video-item">
+        <iframe src="https://www.tiktok.com/embed/v2/7642579094638447879"></iframe>
+        <a class="watch-btn" href="https://www.tiktok.com/@mr.dreamboi2x/video/7642579094638447879" target="_blank">Watch Now</a>
+      </div>
+
+      <div class="video-item">
+        <iframe src="https://www.tiktok.com/embed/v2/7624414572589452552"></iframe>
+        <a class="watch-btn" href="https://www.tiktok.com/@mr.dreamboi2x/video/7624414572589452552" target="_blank">Watch Now</a>
+      </div>
+
+      <div class="video-item">
+        <iframe src="https://www.tiktok.com/embed/v2/7660361857257049351"></iframe>
+        <a class="watch-btn" href="https://www.tiktok.com/@mr.dreamboi2x/video/7660361857257049351" target="_blank">Watch Now</a>
+      </div>
+
+      <div class="video-item">
+        <iframe src="https://www.tiktok.com/embed/v2/7624442596693265682"></iframe>
+        <a class="watch-btn" href="https://www.tiktok.com/@mr.dreamboi2x/video/7624442596693265682" target="_blank">Watch Now</a>
+      </div>
+
+      <div class="video-item">
+        <iframe src="https://www.tiktok.com/embed/v2/7628984350712941832"></iframe>
+        <a class="watch-btn" href="https://www.tiktok.com/@mr.dreamboi2x/video/7628984350712941832" target="_blank">Watch Now</a>
+      </div>
+
     </div>
 
     <div class="dots" id="travelDots"></div>
@@ -454,12 +495,38 @@ footer {
     <div class="arrow arrow-right" onclick="scrollRight('productsTrack')">&#8594;</div>
 
     <div class="video-track" id="productsTrack">
-      <div class="video-item"><iframe src="https://www.tiktok.com/embed/v2/7608511113235418388"></iframe></div>
-      <div class="video-item"><iframe src="https://www.tiktok.com/embed/v2/7619554766393298197"></iframe></div>
-      <div class="video-item"><iframe src="https://www.tiktok.com/embed/v2/7533163019405217042"></iframe></div>
-      <div class="video-item"><iframe src="https://www.tiktok.com/embed/v2/7567368129672695041"></iframe></div>
-      <div class="video-item"><iframe src="https://www.tiktok.com/embed/v2/7525794290778377473"></iframe></div>
-      <div class="video-item"><iframe src="https://www.tiktok.com/embed/v2/7462325313960201490"></iframe></div>
+
+      <div class="video-item">
+        <iframe src="https://www.tiktok.com/embed/v2/7608511113235418388"></iframe>
+        <a class="watch-btn" href="https://www.tiktok.com/@mr.dreamboi2x/video/7608511113235418388" target="_blank">Watch Now</a>
+      </div>
+
+      <div
+              <div class="video-item">
+        <iframe src="https://www.tiktok.com/embed/v2/7619554766393298197"></iframe>
+        <a class="watch-btn" href="https://www.tiktok.com/@mr.dreamboi2x/video/7619554766393298197" target="_blank">Watch Now</a>
+      </div>
+
+      <div class="video-item">
+        <iframe src="https://www.tiktok.com/embed/v2/7533163019405217042"></iframe>
+        <a class="watch-btn" href="https://www.tiktok.com/@mr.dreamboi2x/video/7533163019405217042" target="_blank">Watch Now</a>
+      </div>
+
+      <div class="video-item">
+        <iframe src="https://www.tiktok.com/embed/v2/7567368129672695041"></iframe>
+        <a class="watch-btn" href="https://www.tiktok.com/@mr.dreamboi2x/video/7567368129672695041" target="_blank">Watch Now</a>
+      </div>
+
+      <div class="video-item">
+        <iframe src="https://www.tiktok.com/embed/v2/7525794290778377473"></iframe>
+        <a class="watch-btn" href="https://www.tiktok.com/@mr.dreamboi2x/video/7525794290778377473" target="_blank">Watch Now</a>
+      </div>
+
+      <div class="video-item">
+        <iframe src="https://www.tiktok.com/embed/v2/7462325313960201490"></iframe>
+        <a class="watch-btn" href="https://www.tiktok.com/@mr.dreamboi2x/video/7462325313960201490" target="_blank">Watch Now</a>
+      </div>
+
     </div>
 
     <div class="dots" id="productsDots"></div>
@@ -476,6 +543,7 @@ function toggleMenu(){
 function scrollLeft(id){
   document.getElementById(id).scrollBy({left:-350,behavior:'smooth'});
 }
+
 function scrollRight(id){
   document.getElementById(id).scrollBy({left:350,behavior:'smooth'});
 }
