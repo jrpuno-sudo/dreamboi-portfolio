@@ -31,6 +31,17 @@ html, body {
   --white:#ffffff;
 }
 
+/* ⭐ SOFT & ELEGANT SCROLL REVEAL */
+.reveal {
+  opacity:0;
+  transform:translateY(25px);
+  transition:all 0.9s ease;
+}
+.reveal.active {
+  opacity:1;
+  transform:translateY(0);
+}
+
 /* ⭐ NAVBAR */
 .navbar {
   position:fixed;
@@ -157,6 +168,7 @@ section h2 {
   flex-wrap:wrap;
   margin-top:14px;
 }
+
 .contact-link {
   display:flex;
   align-items:center;
@@ -165,7 +177,19 @@ section h2 {
   text-decoration:none;
   font-weight:600;
   font-size:0.95rem;
+  padding:10px 14px;
+  border:2px solid var(--navy);
+  border-radius:12px;
+  transition:0.25s ease;
+  cursor:pointer;
 }
+
+.contact-link:hover {
+  background:var(--navy);
+  color:white;
+  transform:translateY(-3px);
+}
+
 .icon {
   width:18px;
   height:18px;
@@ -193,9 +217,7 @@ section h2 {
   font-size:0.95rem;
   border:2px solid var(--silver);
 }
-.service-card h3 { margin-bottom:8px; font-size:1.05rem; }
 
-/* Navy gradient cards */
 .service-card:nth-child(1),
 .service-card:nth-child(3),
 .service-card:nth-child(5){
@@ -203,7 +225,6 @@ section h2 {
   color:white;
 }
 
-/* Silver cards */
 .service-card:nth-child(2),
 .service-card:nth-child(4),
 .service-card:nth-child(6){
@@ -271,9 +292,6 @@ section h2 {
   touch-action:manipulation;
   aspect-ratio:9/16;
   object-fit:cover;
-  allowfullscreen;
-  allow="autoplay; encrypted-media";
-  referrerpolicy="strict-origin-when-cross-origin";
 }
 
 @media(max-width:600px){
@@ -351,7 +369,7 @@ footer {
 </head>
 <body>
 
-<nav class="navbar">
+<nav class="navbar reveal">
   <div class="nav-logo">MR. DREAMBOI</div>
 
   <ul class="nav-links" id="mobileMenu">
@@ -368,81 +386,84 @@ footer {
   </div>
 </nav>
 
-<div class="hero">
+<div class="hero reveal">
   <h1>MR. DREAMBOI</h1>
   <p>Travel Creator • Storyteller • Brand Collaborator</p>
 </div>
 
-<section id="about" class="about">
+<section id="about" class="about reveal">
   <h2>ABOUT ME</h2>
   <p>Hey, I’m <strong>Mr. Dreamboi</strong> — a Filipino travel and lifestyle creator crafting cinematic content for 3 years.</p>
   <p>I create travel videos, product reviews, and affiliate content with intention and storytelling.</p>
 
   <div class="stats-container">
-    <div class="stat-box">103.5K<br><span>Followers</span></div>
-    <div class="stat-box">1.2M<br><span>Likes</span></div>
-    <div class="stat-box">3 Years<br><span>Creating</span></div>
+    <div class="stat-box reveal">103.5K<br><span>Followers</span></div>
+    <div class="stat-box reveal">1.2M<br><span>Likes</span></div>
+    <div class="stat-box reveal">3 Years<br><span>Creating</span></div>
   </div>
 </section>
 
-<section id="contact" class="contact">
+<section id="contact" class="contact reveal">
   <h2>CONTACT</h2>
   <p>For collaborations, travel content, and brand work:</p>
 
   <div class="contact-links">
-    <a class="contact-link" href="mailto:jrpuno14344@gmail.com">
+    <a class="contact-link reveal" href="mailto:jrpuno14344@gmail.com">
       <span class="icon">@</span>Email
     </a>
-    <a class="contact-link" href="https://www.tiktok.com/@mr.dreamboi2x">
+    <a class="contact-link reveal" href="https://www.tiktok.com/@mr.dreamboi2x">
       <span class="icon">T</span>TikTok
     </a>
-    <a class="contact-link" href="https://www.facebook.com/share/1BHFcJcR6w/">
+    <a class="contact-link reveal" href="https://www.facebook.com/share/1BHFcJcR6w/">
       <span class="icon">f</span>Facebook
     </a>
-    <a class="contact-link" href="viber://chat?number=09178656011">
+    <a class="contact-link reveal" href="viber://chat?number=09178656011">
       <span class="icon">V</span>Viber: 09178656011
     </a>
   </div>
 </section>
 
-<section id="services" class="services">
+<section id="services" class="services reveal">
   <h2>SERVICES</h2>
   <div class="services-list">
-    <div class="service-card"><h3>Travel Video Creation</h3><p>Cinematic storytelling in destinations.</p></div>
-    <div class="service-card"><h3>Product Reviews</h3><p>Clear, honest creator-style showcases.</p></div>
-    <div class="service-card"><h3>Affiliate Marketing</h3><p>Content that drives clicks and conversions.</p></div>
-    <div class="service-card"><h3>Restaurant Reviews</h3><p>Food, ambiance, and experience highlights.</p></div>
-    <div class="service-card"><h3>Food Reviews</h3><p>Authentic reactions and visual storytelling.</p></div>
-    <div class="service-card"><h3>Brand Collaborations</h3><p>Custom creator campaigns for your brand.</p></div>
+    <div class="service-card reveal"><h3>Travel Video Creation</h3><p>Cinematic storytelling in destinations.</p></div>
+    <div class="service-card reveal"><h3>Product Reviews</h3><p>Clear, honest creator-style showcases.</p></div>
+    <div class="service-card reveal"><h3>Affiliate Marketing</h3><p>Content that drives clicks and conversions.</p></div>
+    <div class="service-card reveal"><h3>Restaurant Reviews</h3><p>Food, ambiance, and experience highlights.</p></div>
+    <div class="service-card reveal"><h3>Food Reviews</h3><p>Authentic reactions and visual storytelling.</p></div>
+    <div class="service-card reveal"><h3>Brand Collaborations</h3><p>Custom creator campaigns for your brand.</p></div>
   </div>
 </section>
 
-<section id="brands">
+<section id="brands" class="brands reveal">
   <h2>BRAND PARTNERS</h2>
   <div class="brands-grid">
-    <div class="brand-item"><img src="Huawei.png"></div>
-    <div class="brand-item"><img src="Xiaomi_logo_(2021-).svg.png"></div>
-    <div class="brand-item"><img src="Techlife.png"></div>
-    <div class="brand-item"><img src="Shopee_logo.svg.png"></div>
-    <div class="brand-item"><img src="lazada-png-logo.png"></div>
 
-    <div class="brand-item"><img src="ulanzi.png"></div>
-    <div class="brand-item"><img src="aolon-600-2_2.png"></div>
-    <div class="brand-item"><img src="ph-11134216-7r98w-lllju1vve6g6d5_tn.jpeg"></div>
-    <div class="brand-item"><img src="Ugreen.webp"></div>
-    <div class="brand-item"><img src="Anker(2).png"></div>
+    <div class="brand-item reveal"><img src="Huawei.png"></div>
+    <div class="brand-item reveal"><img src="Xiaomi_logo_(2021-).svg.png"></div>
+    <div class="brand-item reveal"><img src="Techlife.png"></div>
+    <div class="brand-item reveal"><img src="Shopee_logo.svg.png"></div>
+    <div class="brand-item reveal"><img src="lazada-png-logo.png"></div>
 
-    <div class="brand-item"><img src="Tranyoo.jpeg"></div>
-    <div class="brand-item"><img src="Sleepasil.jpg"></div>
-    <div class="brand-item"><img src="Orashare.jpeg"></div>
-    <div class="brand-item"><img src="Jisulife (1).png"></div>
-    <div class="brand-item"><img src="Goodies.jpeg"></div>
+    <div class="brand-item reveal"><img src="aolon-600-2_2.png"></div>
+    <div class="brand-item reveal"><img src="ph-11134216-7r98w-lllju1vve6g6d5_tn.jpeg"></div>
+    <div class="brand-item reveal"><img src="Ugreen.webp"></div>
+    <div class="brand-item reveal"><img src="Anker(2).png"></div>
+    <div class="brand-item reveal"><img src="Tranyoo.jpeg"></div>
 
-    <div class="brand-item"><img src="images (4).png"></div>
+    <div class="brand-item reveal"><img src="Sleepasil.jpg"></div>
+    <div class="brand-item reveal"><img src="Orashare.jpeg"></div>
+    <div class="brand-item reveal"><img src="Jisulife (1).png"></div>
+    <div class="brand-item reveal"><img src="Goodies.jpeg"></div>
+    <div class="brand-item reveal"><img src="images (4).png"></div>
+
+    <!-- ⭐ ULANZI moved to bottom -->
+    <div class="brand-item reveal"><img src="ulanzi.png"></div>
+
   </div>
 </section>
 
-<section id="travel">
+<section id="travel" class="travel reveal">
   <h2>TRAVEL VIDEOS</h2>
 
   <div class="video-slider">
@@ -451,43 +472,37 @@ footer {
 
     <div class="video-track" id="travelTrack">
 
-      <div class="video-item">
+      <div class="video-item reveal">
         <iframe src="https://www.tiktok.com/embed/v2/7640356573570796818"></iframe>
-        <a class="watch-btn" href="https://www.tiktok.com/@mr.dreamboi2x/video/7640356573570796818" target="_blank">Watch Now</a>
+        <a class="watch-btn" href="https://www.tiktok.com/@mr.dreamboi2x/video/7640356573570796818?is_from_webapp=1&sender_device=pc" target="_blank">Watch Now</a>
       </div>
 
-      <div class="video-item">
+      <div class="video-item reveal">
         <iframe src="https://www.tiktok.com/embed/v2/7642579094638447879"></iframe>
-        <a class="watch-btn" href="https://www.tiktok.com/@mr.dreamboi2x/video/7642579094638447879" target="_blank">Watch Now</a>
+        <a class="watch-btn" href="https://www.tiktok.com/@mr.dreamboi2x/video/7642579094638447879?is_from_webapp=1&sender_device=pc" target="_blank">Watch Now</a>
       </div>
 
-      <div class="video-item">
+      <div class="video-item reveal">
         <iframe src="https://www.tiktok.com/embed/v2/7624414572589452552"></iframe>
-        <a class="watch-btn" href="https://www.tiktok.com/@mr.dreamboi2x/video/7624414572589452552" target="_blank">Watch Now</a>
+        <a class="watch-btn" href="https://www.tiktok.com/@mr.dreamboi2x/video/7624414572589452552?is_from_webapp=1&sender_device=pc" target="_blank">Watch Now</a>
       </div>
 
-      <div class="video-item">
+      <div class="video-item reveal">
         <iframe src="https://www.tiktok.com/embed/v2/7660361857257049351"></iframe>
-        <a class="watch-btn" href="https://www.tiktok.com/@mr.dreamboi2x/video/7660361857257049351" target="_blank">Watch Now</a>
+        <a class="watch-btn" href="https://www.tiktok.com/@mr.dreamboi2x/video/7660361857257049351?is_from_webapp=1&sender_device=pc" target="_blank">Watch Now</a>
       </div>
 
-      <div class="video-item">
+      <div class="video-item reveal">
         <iframe src="https://www.tiktok.com/embed/v2/7624442596693265682"></iframe>
-        <a class="watch-btn" href="https://www.tiktok.com/@mr.dreamboi2x/video/7624442596693265682" target="_blank">Watch Now</a>
-      </div>
+        <a class="watch-btn" href="https://www.tiktok.com/@mr.dreamboi2x/video
+                </div> <!-- end of travelTrack -->
 
-      <div class="video-item">
-        <iframe src="https://www.tiktok.com/embed/v2/7628984350712941832"></iframe>
-        <a class="watch-btn" href="https://www.tiktok.com/@mr.dreamboi2x/video/7628984350712941832" target="_blank">Watch Now</a>
-      </div>
-
+      <div class="dots" id="travelDots"></div>
     </div>
-
-    <div class="dots" id="travelDots"></div>
-  </div>
 </section>
 
-<section id="products">
+<!-- ⭐ PRODUCT VIDEOS SECTION -->
+<section id="products" class="products reveal">
   <h2>PRODUCT VIDEOS</h2>
 
   <div class="video-slider">
@@ -496,38 +511,85 @@ footer {
 
     <div class="video-track" id="productsTrack">
 
-      <div class="video-item">
-        <iframe src="https://www.tiktok.com/embed/v2/7608511113235418388"></iframe>
-        <a class="watch-btn" href="https://www.tiktok.com/@mr.dreamboi2x/video/7608511113235418388" target="_blank">Watch Now</a>
+      <!-- PRODUCT VIDEO 1 -->
+      <div class="video-item reveal">
+        <iframe 
+          src="https://www.tiktok.com/embed/v2/7608511113235418388"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+          referrerpolicy="strict-origin-when-cross-origin">
+        </iframe>
+        <a class="watch-btn" 
+           href="https://www.tiktok.com/@mr.dreamboi2x/video/7608511113235418388?is_from_webapp=1&sender_device=pc"
+           target="_blank">Watch Now</a>
       </div>
 
-      <div
-              <div class="video-item">
-        <iframe src="https://www.tiktok.com/embed/v2/7619554766393298197"></iframe>
-        <a class="watch-btn" href="https://www.tiktok.com/@mr.dreamboi2x/video/7619554766393298197" target="_blank">Watch Now</a>
+      <!-- PRODUCT VIDEO 2 -->
+      <div class="video-item reveal">
+        <iframe 
+          src="https://www.tiktok.com/embed/v2/7619554766393298197"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+          referrerpolicy="strict-origin-when-cross-origin">
+        </iframe>
+        <a class="watch-btn" 
+           href="https://www.tiktok.com/@mr.dreamboi2x/video/7619554766393298197?is_from_webapp=1&sender_device=pc"
+           target="_blank">Watch Now</a>
       </div>
 
-      <div class="video-item">
-        <iframe src="https://www.tiktok.com/embed/v2/7533163019405217042"></iframe>
-        <a class="watch-btn" href="https://www.tiktok.com/@mr.dreamboi2x/video/7533163019405217042" target="_blank">Watch Now</a>
+      <!-- PRODUCT VIDEO 3 -->
+      <div class="video-item reveal">
+        <iframe 
+          src="https://www.tiktok.com/embed/v2/7533163019405217042"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+          referrerpolicy="strict-origin-when-cross-origin">
+        </iframe>
+        <a class="watch-btn" 
+           href="https://www.tiktok.com/@mr.dreamboi2x/video/7533163019405217042?is_from_webapp=1&sender_device=pc"
+           target="_blank">Watch Now</a>
       </div>
 
-      <div class="video-item">
-        <iframe src="https://www.tiktok.com/embed/v2/7567368129672695041"></iframe>
-        <a class="watch-btn" href="https://www.tiktok.com/@mr.dreamboi2x/video/7567368129672695041" target="_blank">Watch Now</a>
+      <!-- PRODUCT VIDEO 4 -->
+      <div class="video-item reveal">
+        <iframe 
+          src="https://www.tiktok.com/embed/v2/7567368129672695041"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+          referrerpolicy="strict-origin-when-cross-origin">
+        </iframe>
+        <a class="watch-btn" 
+           href="https://www.tiktok.com/@mr.dreamboi2x/video/7567368129672695041?is_from_webapp=1&sender_device=pc"
+           target="_blank">Watch Now</a>
       </div>
 
-      <div class="video-item">
-        <iframe src="https://www.tiktok.com/embed/v2/7525794290778377473"></iframe>
-        <a class="watch-btn" href="https://www.tiktok.com/@mr.dreamboi2x/video/7525794290778377473" target="_blank">Watch Now</a>
+      <!-- PRODUCT VIDEO 5 -->
+      <div class="video-item reveal">
+        <iframe 
+          src="https://www.tiktok.com/embed/v2/7525794290778377473"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+          referrerpolicy="strict-origin-when-cross-origin">
+        </iframe>
+        <a class="watch-btn" 
+           href="https://www.tiktok.com/@mr.dreamboi2x/video/7525794290778377473?is_from_webapp=1&sender_device=pc"
+           target="_blank">Watch Now</a>
       </div>
 
-      <div class="video-item">
-        <iframe src="https://www.tiktok.com/embed/v2/7462325313960201490"></iframe>
-        <a class="watch-btn" href="https://www.tiktok.com/@mr.dreamboi2x/video/7462325313960201490" target="_blank">Watch Now</a>
+      <!-- PRODUCT VIDEO 6 -->
+      <div class="video-item reveal">
+        <iframe 
+          src="https://www.tiktok.com/embed/v2/7462325313960201490"
+          allow="autoplay; encrypted-media"
+          allowfullscreen
+          referrerpolicy="strict-origin-when-cross-origin">
+        </iframe>
+        <a class="watch-btn" 
+           href="https://www.tiktok.com/@mr.dreamboi2x/video/7462325313960201490?is_from_webapp=1&sender_device=pc"
+           target="_blank">Watch Now</a>
       </div>
 
-    </div>
+    </div> <!-- end productsTrack -->
 
     <div class="dots" id="productsDots"></div>
   </div>
@@ -535,6 +597,7 @@ footer {
 
 <footer>© 2026 Mr. Dreamboi · Creator Portfolio</footer>
 
+<!-- ⭐ SCRIPTS -->
 <script>
 function toggleMenu(){
   document.getElementById("mobileMenu").classList.toggle("show");
@@ -547,6 +610,25 @@ function scrollLeft(id){
 function scrollRight(id){
   document.getElementById(id).scrollBy({left:350,behavior:'smooth'});
 }
+
+/* ⭐ Scroll Reveal */
+const reveals = document.querySelectorAll('.reveal');
+
+function revealOnScroll() {
+  for (let i = 0; i < reveals.length; i++) {
+    const windowHeight = window.innerHeight;
+    const elementTop = reveals[i].getBoundingClientRect().top;
+
+    if (elementTop < windowHeight - 50) {
+      reveals[i].classList.add('active');
+    } else {
+      reveals[i].classList.remove('active');
+    }
+  }
+}
+
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll();
 </script>
 
 </body>
